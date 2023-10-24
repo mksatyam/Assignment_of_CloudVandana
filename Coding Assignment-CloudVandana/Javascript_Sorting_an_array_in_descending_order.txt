@@ -1,0 +1,20 @@
+const input = prompt("Enter a list of numbers separated by spaces:");
+
+if (input !== null) {
+   
+    const numbers = input.split(" ").map(Number);
+
+    if (numbers.length > 0) {
+        
+        numbers.sort(function(a, b) {
+            return b - a;
+        });
+
+        console.log("Sorted in descending order: " + numbers.join(", "));
+    } else {
+        console.log("No valid numbers were entered.");
+    }
+} else {
+    console.log("No input was provided.");
+}
+
